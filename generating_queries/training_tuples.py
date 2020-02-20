@@ -67,8 +67,8 @@ df_train= pd.DataFrame(columns=['file','northing','easting'])
 df_test= pd.DataFrame(columns=['file','northing','easting'])
 
 for folder in folders:
-	df_locations= pd.read_csv(os.path.join(base_path,runs_folder,folder,filename),sep=',')
-	df_locations['label']=runs_folder+folder+pointcloud_fols+df_locations['label'].astype(str)+'.bin'
+	df_locations= pd.read_csv(os.path.join(base_path,folder,filename),sep=',')
+	df_locations['label']=folder+pointcloud_fols+df_locations['label'].astype(str)+'.bin'
 	df_locations=df_locations.rename(columns={'label':'file'})
 	
 	for index, row in df_locations.iterrows():
