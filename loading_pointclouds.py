@@ -4,7 +4,7 @@ import numpy as np
 import random
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-BASE_PATH=os.path.join(BASE_DIR, '../benchmark_datasets/')
+BASE_PATH=os.path.join(BASE_DIR, 'dataset/')
 print(BASE_PATH)
 #BASE_PATH = "/media/deep-three/Deep_Store/CVPR2018/benchmark_datasets/"
 
