@@ -79,8 +79,8 @@ for folder in folders:
         
 folder = all_folders[-1]
 df_locations= pd.read_csv(os.path.join(base_path,folder,filename),sep=',')
-df_locations['label']=folder+pointcloud_fols+df_locations['label'].astype(str)+'.bin'
-df_locations=df_locations.rename(columns={'label':'file'})
+df_locations['timestamp']=folder+pointcloud_fols+df_locations['timestamp'].astype(str)+'.bin'
+df_locations=df_locations.rename(columns={'timestamp':'file'})
 
 for index, row in df_locations.iterrows():
     #if(check_in_test_set(row['northing'], row['easting'], p, x_width, y_width)):
