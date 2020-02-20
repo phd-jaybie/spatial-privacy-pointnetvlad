@@ -77,7 +77,7 @@ for folder in folders:
 		#else:
 		df_train=df_train.append(row, ignore_index=True)
         
-with os.path.join(os.path.join(BASE_DIR,base_path),"ransac_trial_3/") as folder:
+with "ransac_trial_3" as folder:
 	df_locations= pd.read_csv(os.path.join(base_path,folder,filename),sep=',')
 	df_locations['label']=folder+pointcloud_fols+df_locations['label'].astype(str)+'.bin'
 	df_locations=df_locations.rename(columns={'label':'file'})
