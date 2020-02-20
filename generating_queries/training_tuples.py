@@ -37,7 +37,7 @@ p=[p1,p2,p3,p4]
 def check_in_test_set(northing, easting, points, x_width, y_width):
 	in_test_set=False
 	for point in points:
-		if(point[0]-x_width<northing and northing< point[0]+x_width and point[1]-y_width<easting and easting<point[1]+y_width):
+		if(point[0]-x_width<northing  and northing< point[0]+x_width and point[1]-y_width<easting and easting<point[1]+y_width):
 			in_test_set=True
 			break
 	return in_test_set
@@ -68,8 +68,8 @@ df_test= pd.DataFrame(columns=['file','northing','easting'])
 
 for folder in folders:
 	df_locations= pd.read_csv(os.path.join(base_path,folder,filename),sep=',')
-	df_locations['label']=folder+pointcloud_fols+df_locations['label'].astype(str)+'.bin'
-	df_locations=df_locations.rename(columns={'label':'file'})
+	df_locations['timestamp']=folder+pointcloud_fols+df_locations['timestamp'].astype(str)+'.bin'
+	df_locations=df_locations.rename(columns={'timestamp':'file'})
 	
 	for index, row in df_locations.iterrows():
 		#if(check_in_test_set(row['northing'], row['easting'], p, x_width, y_width)):
