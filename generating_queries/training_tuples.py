@@ -77,16 +77,16 @@ for folder in folders:
 		#else:
 		df_train=df_train.append(row, ignore_index=True)
         
-with "ransac_trial_3" as folder:
-	df_locations= pd.read_csv(os.path.join(base_path,folder,filename),sep=',')
-	df_locations['label']=folder+pointcloud_fols+df_locations['label'].astype(str)+'.bin'
-	df_locations=df_locations.rename(columns={'label':'file'})
-	
-	for index, row in df_locations.iterrows():
-		#if(check_in_test_set(row['northing'], row['easting'], p, x_width, y_width)):
-		df_test=df_test.append(row, ignore_index=True)
-		#else:
-		#df_train=df_train.append(row, ignore_index=True)
+folder = all_folders[-1]
+df_locations= pd.read_csv(os.path.join(base_path,folder,filename),sep=',')
+df_locations['label']=folder+pointcloud_fols+df_locations['label'].astype(str)+'.bin'
+df_locations=df_locations.rename(columns={'label':'file'})
+
+for index, row in df_locations.iterrows():
+    #if(check_in_test_set(row['northing'], row['easting'], p, x_width, y_width)):
+    df_test=df_test.append(row, ignore_index=True)
+    #else:
+    #df_train=df_train.append(row, ignore_index=True)
 
 print("Number of training submaps: "+str(len(df_train['file'])))
 print("Number of non-disjoint test submaps: "+str(len(df_test['file'])))
