@@ -33,7 +33,7 @@ FLAGS = parser.parse_args()
 
 BATCH_NUM_QUERIES = FLAGS.batch_num_queries
 EVAL_BATCH_SIZE = 1
-NUM_POINTS = 4096
+NUM_POINTS = 1024#4096
 POSITIVES_PER_QUERY= FLAGS.positives_per_query
 NEGATIVES_PER_QUERY= FLAGS.negatives_per_query
 MAX_EPOCH = FLAGS.max_epoch
@@ -46,7 +46,7 @@ DECAY_RATE = FLAGS.decay_rate
 MARGIN1 = FLAGS.margin_1
 MARGIN2 = FLAGS.margin_2
 
-TRAIN_FILE = 'generating_queries/training_queries_baseline.pickle'
+TRAIN_FILE = 'generating_queries/training_queries_baseline_spatial_privacy.pickle'
 TEST_FILE = 'generating_queries/test_queries_baseline.pickle'
 
 LOG_DIR = FLAGS.log_dir
