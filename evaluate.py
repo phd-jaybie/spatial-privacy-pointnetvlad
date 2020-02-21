@@ -27,7 +27,7 @@ FLAGS = parser.parse_args()
 #BATCH_SIZE = FLAGS.batch_size
 BATCH_NUM_QUERIES = FLAGS.batch_num_queries
 EVAL_BATCH_SIZE = 1
-NUM_POINTS = 4096
+NUM_POINTS = 1024#4096
 POSITIVES_PER_QUERY= FLAGS.positives_per_query
 NEGATIVES_PER_QUERY= FLAGS.negatives_per_query
 GPU_INDEX = FLAGS.gpu
@@ -38,8 +38,8 @@ DECAY_RATE = FLAGS.decay_rate
 RESULTS_FOLDER="results/"
 if not os.path.exists(RESULTS_FOLDER): os.mkdir(RESULTS_FOLDER)
 
-DATABASE_FILE= 'generating_queries/oxford_evaluation_database.pickle'
-QUERY_FILE= 'generating_queries/oxford_evaluation_query.pickle'
+DATABASE_FILE= 'generating_queries/spatial_privacy_evaluation_database.pickle'
+QUERY_FILE= 'generating_queries/spatial_privacy_evaluation_query.pickle'
 
 LOG_DIR = 'log/'
 MODEL_DIR = 'baseline/'
