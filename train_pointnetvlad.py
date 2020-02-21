@@ -47,7 +47,7 @@ MARGIN1 = FLAGS.margin_1
 MARGIN2 = FLAGS.margin_2
 
 TRAIN_FILE = 'generating_queries/training_queries_baseline_spatial_privacy.pickle'
-TEST_FILE = 'generating_queries/test_queries_baseline.pickle'
+TEST_FILE = 'generating_queries/test_queries_baseline_spatial_privacy.pickle'
 
 LOG_DIR = FLAGS.log_dir
 if not os.path.exists(LOG_DIR): os.mkdir(LOG_DIR)
