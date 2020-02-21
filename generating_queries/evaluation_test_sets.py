@@ -74,8 +74,8 @@ def construct_query_and_database_sets(base_path, folders, pointcloud_fols, filen
 				#indices of the positive matches in database i of each query (key) in test set j
 				test_sets[j][key][i]=index[0].tolist()
 
-	output_to_file(database_sets, output_name+'_evaluation_database.pickle')
-	output_to_file(test_sets, output_name+'_evaluation_query.pickle')
+	output_to_file(database_sets, 'spatial_privacy_evaluation_database.pickle')
+	output_to_file(test_sets, 'spatial_privacy_evaluation_query.pickle')
 
 ###Building database and query files for evaluation
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
