@@ -79,7 +79,7 @@ def construct_query_and_database_sets(base_path, folders, pointcloud_fols, filen
 
 ###Building database and query files for evaluation
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-base_path= "../dataset"
+base_path= "../dataset_testing/"
 
 #For Oxford
 folders=[]
