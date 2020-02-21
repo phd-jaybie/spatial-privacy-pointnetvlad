@@ -26,7 +26,7 @@ def load_pc_file(filename):
 	#returns Nx3 matrix
 	pc=np.fromfile(os.path.join(BASE_PATH,filename), dtype=np.float64)
 
-	if(pc.shape[0]!= 4096*3):
+	if(pc.shape[0]!= 1024*3):
 		print("Error in pointcloud shape")
 		return np.array([])
 
@@ -38,7 +38,7 @@ def load_pc_files(filenames):
 	for filename in filenames:
 		#print(filename)
 		pc=load_pc_file(filename)
-		if(pc.shape[0]!=4096):
+		if(pc.shape[0]!=1024):
 			continue
 		pcs.append(pc)
 	pcs=np.array(pcs)
