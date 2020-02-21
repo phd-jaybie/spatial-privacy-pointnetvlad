@@ -85,7 +85,7 @@ base_path= "../dataset_testing/"
 folders=[]
 #runs_folder = "oxford/"
 all_folders=sorted(os.listdir(os.path.join(BASE_DIR,base_path)))
-index_list=range(length(all_folders))
+index_list=range(len(all_folders))
 print(len(index_list))
 for index in index_list:
 	folders.append(all_folders[index])
