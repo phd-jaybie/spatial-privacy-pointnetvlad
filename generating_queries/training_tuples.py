@@ -10,8 +10,8 @@ BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 base_path = "../dataset/"
 
 #runs_folder= "oxford/"
-filename = "pointcloud_centroids_4m_0.25overlap.csv"
-pointcloud_fols="/pointcloud_4m_0.25/"
+filename = "pointcloud_centroids_4m_0.25.csv"
+pointcloud_fols="/pointcloud_4m_0.25_bin/"
 
 all_folders=sorted(os.listdir(os.path.join(BASE_DIR,base_path)))
 
@@ -91,5 +91,5 @@ for index, row in df_locations.iterrows():
 print("Number of training submaps: "+str(len(df_train['file'])))
 print("Number of non-disjoint test submaps: "+str(len(df_test['file'])))
 construct_query_dict(df_train,"training_queries_baseline_spatial_privacy.pickle")
-construct_query_dict(df_test,"test_queries_baseline.pickle")
+construct_query_dict(df_test,"test_queries_baseline_spatial_privacy.pickle")
 
