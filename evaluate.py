@@ -44,7 +44,7 @@ QUERY_FILE= 'generating_queries/spatial_privacy_evaluation_query.pickle'
 LOG_DIR = 'log/'
 MODEL_DIR = 'baseline/'
 output_file= RESULTS_FOLDER +'results.txt'
-model_file= "model_baseline.ckpt"#"model.ckpt" 
+model_file= "model.ckpt" #"model_baseline.ckpt"#
 
 DATABASE_SETS= get_sets_dict(DATABASE_FILE)
 QUERY_SETS= get_sets_dict(QUERY_FILE)
@@ -109,7 +109,7 @@ def evaluate():
         sess = tf.Session(config=config)
 
 
-        saver.restore(sess, os.path.join(MODEL_DIR, model_file))
+        saver.restore(sess, os.path.join(LOG_DIR, model_file))#MODEL_DIR, model_file))
         print("Model restored.")
 
         ops = {'query': query,
