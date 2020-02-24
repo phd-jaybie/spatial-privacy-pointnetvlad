@@ -143,14 +143,14 @@ def evaluate():
 
         print()
         ave_recall=recall/count
-        print(ave_recall)
+        print("Ave recall:",ave_recall)
 
         #print(similarity)
         average_similarity= np.mean(similarity)
-        print(average_similarity)
+        print("Average similarity:",average_similarity)
 
         ave_one_percent_recall= np.mean(one_percent_recall)
-        print(ave_one_percent_recall)
+        print("Average 1\%-recall:",ave_one_percent_recall)
 
 
         #filename=RESULTS_FOLDER +'average_recall_oxford_netmax_sg(finetune_conv5).txt'
