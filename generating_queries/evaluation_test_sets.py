@@ -70,12 +70,12 @@ def construct_query_and_database_sets(base_path, folders, pointcloud_fols, filen
 				continue
 			for key in range(len(test_sets[j].keys())):
 				coor=np.array([[test_sets[j][key]["northing"],test_sets[j][key]["easting"]]])
-				index = tree.query_radius(coor, r=25)
+				index = tree.query_radius(coor, r=4)
 				#indices of the positive matches in database i of each query (key) in test set j
 				test_sets[j][key][i]=index[0].tolist()
 
-	output_to_file(database_sets, 'spatial_privacy_evaluation_database.pickle')
-	output_to_file(test_sets, 'spatial_privacy_evaluation_query.pickle')
+	output_to_file(database_sets, 'spatial_privacy_evaluation_database_4m.pickle')
+	output_to_file(test_sets, 'spatial_privacy_evaluation_query_4m.pickle')
 
 ###Building database and query files for evaluation
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
